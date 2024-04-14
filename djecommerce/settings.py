@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'django_countries',
-
     'core'
 ]
 MIDDLEWARE = [
@@ -93,3 +92,4 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend'
 )
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'

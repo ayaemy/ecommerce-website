@@ -4616,22 +4616,22 @@ textarea:focus {
   position: relative;
 }
 
-.banner-img img {
-  height: auto;
-  /* Ensures the image's aspect ratio is maintained */
-  max-height: 1000x;
-  /* Adjust the maximum height as needed */
-  width: auto;
-  /* Ensures the image's aspect ratio is maintained */
-}
-
 .single-main-slider {
   background-size: cover;
   /* Ensure the image covers the entire slide */
   background-position: center;
   /* Center the image within the slide */
-  min-height: 841px;
-  /* Adjust the minimum height of the slide */
+  min-height: 1000px;
+  /* Increase the minimum height of the slide */
+}
+
+.banner-img img {
+  height: auto;
+  /* Ensures the image's aspect ratio is maintained */
+  max-height: 5000px;
+  /* Adjust the maximum height as needed */
+  width: auto;
+  /* Ensures the image's aspect ratio is maintained */
 }
 
 .main-menu>nav>ul>li>ul.mega-menu-style-2>li .banner-menu-content-wrap a img {
@@ -13618,6 +13618,7 @@ body.body-menu-overlay::before {
   font-size: 32px;
   line-height: 23px;
   margin: 0 0 0px;
+  ;
 }
 
 @media only screen and (max-width: 767px) {
