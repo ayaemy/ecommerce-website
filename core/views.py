@@ -142,3 +142,4 @@ def remove_from_cart(request, slug):
         return redirect("core:product_details", slug=slug)
 
 
+print("gvjvj")
