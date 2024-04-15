@@ -55,10 +55,31 @@ def register(request):
 		'form':form,
 		})
 
+
+from django.views.generic import ListView
+from .models import Item
+
+from django.views.generic import ListView
+from .models import Item
+
 class HomeView(ListView):
     model = Item
     paginate_by = 10
     template_name = "home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # Get initial queryset of items
+        object_list = self.get_queryset()
+
+        # Get additional product (item with a specific slug, e.g., 'test-product-8')
+        additional_object_list = Item.objects.filter(slug='test-product-8')
+
+        # Append additional products to the existing object_list
+        context['object_list'] = list(object_list) + list(additional_object_list)
+
+        return context
 
 class ItemDetailView(DetailView):
     model = Item

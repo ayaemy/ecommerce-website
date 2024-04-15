@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.shortcuts import reverse
 # Create your models here.
+# Define your category choices
 class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
@@ -16,7 +17,7 @@ class Item(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(Item, self).save(*args, **kwargs)
-        
+
     def get_absolute_url(self):
         return reverse("core:product_details", kwargs={
             'slug': self.slug

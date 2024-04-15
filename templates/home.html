@@ -438,201 +438,189 @@
         </div>
     </div>
 </div>
-
-<div class="product-area pb-75 section-padding-1">
+<!-- Additional Items Section -->
+<div class="product-area section-padding-1">
     <div class="container-fluid">
-        <div class="section-wrap mb-50 pb-60">
-            <div class="section-title-6">
-            </div>
-        </div>
-        <div class="tab-content jump">
-            <div id="product-13" class="tab-pane active">
-                <div class="row">
-                    {% for item in object_list %}
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="product-wrap mb-50">
-                            <div class="product-img default-overlay mb-25">
-                                <a href="{{ item.get_absolute_url }}">
-                                    {% if item.image %}
-                                    <img class="default-img" src="{{ item.image.url }}" alt="Custom Image" height="400">
-                                    {% else %}
-                                    <img class="default-img" src="{% static 'assets/images/product/ay.jpg' %}"
-                                        alt="Default Image">
-                                    {% endif %}
-                                    <img class="hover-img" src="{% static 'assets/images/product/ay.jpg' %}" alt="">
-                                </a>
-                                <div class="product-action product-action-position-1">
-                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i
-                                            class="fa fa-eye"></i><span>Quick Shop</span></a>
-                                    <a title="Add to Wishlist" href="#"><i class="fa fa-heart"></i><span>Add
-                                            to
-                                            Wishlist</span></a>
-                                    <a class="icon-blod" title="Add to Compare" href="#"><i
-                                            class="dlicon arrows-4_compare"></i><span>Add to
-                                            Compare</span></a>
-                                    <a title="Add to Cart" href="#"><i class="fa fa-shopping-cart"></i><span>Add to
-                                            Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2 title-font-width-400 text-center">
-                                <h3><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h3>
-                                <div class="product-price">
-                                    <span class="new-price">${{ item.price }}</span>
-                                </div>
-                            </div>
+        <div class="row">
+            {% for item in additional_object_list %}
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="product-wrap mb-50">
+                    <div class="product-img default-overlay mb-25">
+                        <a href="{{ item.get_absolute_url }}">
+                            {% if item.image %}
+                            <img class="default-img" src="{{ item.image.url }}" alt="Custom Image" height="400">
+                            {% else %}
+                            <img class="default-img" src="{% static 'assets/images/product/ay.jpg' %}"
+                                alt="Default Image">
+                            {% endif %}
+                            <img class="hover-img" src="{% static 'assets/images/product/ay.jpg' %}" alt="">
+                        </a>
+                        <div class="product-action product-action-position-1">
+                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i
+                                    class="fa fa-eye"></i><span>Quick Shop</span></a>
+                            <a title="Add to Wishlist" href="#"><i class="fa fa-heart"></i><span>Add to
+                                    Wishlist</span></a>
+                            <a title="Add to Compare" href="#"><i class="dlicon arrows-4_compare"></i><span>Add to
+                                    Compare</span></a>
+                            <a title="Add to Cart" href="#"><i class="fa fa-shopping-cart"></i><span>Add to
+                                    Cart</span></a>
                         </div>
                     </div>
-                    {% endfor %}
-                    <div class="brand-area section-padding-1 pb-30">
-                        <div class="container-fluid">
-                            <div class="section-wrap pb-60 mb-30">
-                                <div class="section-title-6">
-                                    <h2>HOT BRANDS</h2>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia4.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia2.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia3.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia1.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia5.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2 col-md-4 col-6 col-sm-4">
-                                    <div class="single-brand-logo text-center">
-                                        <a href="#"><img src="assets/images/brand-logo/lilia6.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="product-content-2 title-font-width-400 text-center">
+                        <h3><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h3>
+                        <div class="product-price">
+                            <span class="new-price">${{ item.price }}</span>
                         </div>
                     </div>
-
-                    <div class="support-lists">
-                        <ul>
-                            <li><a href="#"><i class="dlicon ui-3_chat-46"></i></a></li>
-                            <li><a href="#"><i class=" dlicon ui-3_phone"></i></a></li>
-                            <li><a href="#"><i class="dlicon ui-1_email-85"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
-                                            class="dlicon ui-1_simple-remove" aria-hidden="true"></span></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row g-0">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="quickview-slider-active owl-carousel">
-                                                <a class="img-popup"
-                                                    href="{% static 'assets/images/product/quickview-1.jpg' %}"><img
-                                                        src="{% static 'assets/images/product/quickview-1.jpg' %}"
-                                                        alt=""><span>sold
-                                                        uot</span></a>
-                                                <a class="img-popup"
-                                                    href="{% static 'assets/images/product/quickview-2.jpg' %}"><img
-                                                        src="{% static 'assets/images/product/quickview-2.jpg' %}"
-                                                        alt=""><span>sold
-                                                        uot</span></a>
-                                            </div>
-                                            <!-- Thumbnail Large Image End -->
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="product-details-content">
-                                                <div class="pro-dec-next-prev">
-                                                    <a class="prev" href="#"><i
-                                                            class="dlicon arrows-1_tail-left"></i></a>
-                                                    <a class="next" href="#"><i
-                                                            class="dlicon arrows-1_tail-right"></i></a>
-                                                </div>
-                                                <h2 class="uppercase">Quilted parka with hood</h2>
-                                                <h3>$49.00</h3>
-                                                <div class="product-details-peragraph">
-                                                    <p>Donec accumsan auctor iaculis. Sed suscipit
-                                                        arcu
-                                                        ligula, at egestas magna
-                                                        molestie a. Proin ac ex maximus, ultrices
-                                                        justo
-                                                        eget, sodales orci. Aliquam libero
-                                                        ac turpis pharetra, in vehicula scelerisque.
-                                                        Vestibulum ut sem laoreet, feugiat
-                                                        tellus at, hendrerit arcu.</p>
-                                                </div>
-                                                <div class="product-details-action-wrap">
-                                                    <div class="product-details-quality">
-                                                        <div class="cart-plus-minus">
-                                                            <input class="cart-plus-minus-box" type="text"
-                                                                name="qtybutton" value="2">
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-details-cart">
-                                                        <a title="Add to cart" href="#">Add to
-                                                            cart</a>
-                                                    </div>
-                                                    <div class="product-details-wishlist">
-                                                        <a title="Add to wishlist" href="#"><i
-                                                                class="fa fa-heart"></i></a>
-                                                    </div>
-                                                    <div class="product-details-compare">
-                                                        <a title="Add to compare" href="#"><i
-                                                                class="dlicon arrows-4_compare"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-details-info">
-                                                    <a href="#"><i class="dlicon location_pin"></i>Store
-                                                        availability</a>
-                                                    <a href="#"><i class="dlicon envir_car"></i>Delivery
-                                                        and
-                                                        return</a>
-                                                    <a href="#"><i class="dlicon design_measure-17"></i>Size
-                                                        Guide</a>
-                                                </div>
-                                                <div class="product-details-meta">
-                                                    <span>SKU: REF. LA-140</span>
-                                                    <span>Categories: <a href="#">Fashions</a>, <a href="#">Main
-                                                            01</a>, <a href="#">Main
-                                                            02</a></span>
-                                                    <span>Tags: <a href="#">Blazer</a>, <a href="#">chair</a>,
-                                                        <a href="#">Coat</a>,
-                                                        <a href="#">dress</a>, <a href="#">light</a>, <a
-                                                            href="#">Living</a>, <a href="#">Main
-                                                            01</a></span>
-                                                </div>
-                                                <div class="social-icon-style-3">
-                                                    <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                                    <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                                                    <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                                                    <a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
-                                                    <a class="google-plus" href="#"><i
-                                                            class="fa fa-google-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal end -->
                 </div>
-                {% endblock content %}
+            </div>
+            {% endfor %}
+            <div class="brand-area section-padding-1 pb-30">
+                <div class="container-fluid">
+                    <div class="section-wrap pb-60 mb-30">
+                        <div class="section-title-6">
+                            <h2>HOT BRANDS</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia4.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia2.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia3.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia1.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia5.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 col-sm-4">
+                            <div class="single-brand-logo text-center">
+                                <a href="#"><img src="assets/images/brand-logo/lilia6.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-lists">
+                <ul>
+                    <li><a href="#"><i class="dlicon ui-3_chat-46"></i></a></li>
+                    <li><a href="#"><i class=" dlicon ui-3_phone"></i></a></li>
+                    <li><a href="#"><i class="dlicon ui-1_email-85"></i></a></li>
+                </ul>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
+                                    class="dlicon ui-1_simple-remove" aria-hidden="true"></span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-0">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="quickview-slider-active owl-carousel">
+                                        <a class="img-popup"
+                                            href="{% static 'assets/images/product/quickview-1.jpg' %}"><img
+                                                src="{% static 'assets/images/product/quickview-1.jpg' %}"
+                                                alt=""><span>sold
+                                                uot</span></a>
+                                        <a class="img-popup"
+                                            href="{% static 'assets/images/product/quickview-2.jpg' %}"><img
+                                                src="{% static 'assets/images/product/quickview-2.jpg' %}"
+                                                alt=""><span>sold
+                                                uot</span></a>
+                                    </div>
+                                    <!-- Thumbnail Large Image End -->
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="product-details-content">
+                                        <div class="pro-dec-next-prev">
+                                            <a class="prev" href="#"><i class="dlicon arrows-1_tail-left"></i></a>
+                                            <a class="next" href="#"><i class="dlicon arrows-1_tail-right"></i></a>
+                                        </div>
+                                        <h2 class="uppercase">Quilted parka with hood</h2>
+                                        <h3>$49.00</h3>
+                                        <div class="product-details-peragraph">
+                                            <p>Donec accumsan auctor iaculis. Sed suscipit
+                                                arcu
+                                                ligula, at egestas magna
+                                                molestie a. Proin ac ex maximus, ultrices
+                                                justo
+                                                eget, sodales orci. Aliquam libero
+                                                ac turpis pharetra, in vehicula scelerisque.
+                                                Vestibulum ut sem laoreet, feugiat
+                                                tellus at, hendrerit arcu.</p>
+                                        </div>
+                                        <div class="product-details-action-wrap">
+                                            <div class="product-details-quality">
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" type="text" name="qtybutton"
+                                                        value="2">
+                                                </div>
+                                            </div>
+                                            <div class="product-details-cart">
+                                                <a title="Add to cart" href="#">Add to
+                                                    cart</a>
+                                            </div>
+                                            <div class="product-details-wishlist">
+                                                <a title="Add to wishlist" href="#"><i class="fa fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-details-compare">
+                                                <a title="Add to compare" href="#"><i
+                                                        class="dlicon arrows-4_compare"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-details-info">
+                                            <a href="#"><i class="dlicon location_pin"></i>Store
+                                                availability</a>
+                                            <a href="#"><i class="dlicon envir_car"></i>Delivery
+                                                and
+                                                return</a>
+                                            <a href="#"><i class="dlicon design_measure-17"></i>Size
+                                                Guide</a>
+                                        </div>
+                                        <div class="product-details-meta">
+                                            <span>SKU: REF. LA-140</span>
+                                            <span>Categories: <a href="#">Fashions</a>, <a href="#">Main
+                                                    01</a>, <a href="#">Main
+                                                    02</a></span>
+                                            <span>Tags: <a href="#">Blazer</a>, <a href="#">chair</a>,
+                                                <a href="#">Coat</a>,
+                                                <a href="#">dress</a>, <a href="#">light</a>, <a href="#">Living</a>, <a
+                                                    href="#">Main
+                                                    01</a></span>
+                                        </div>
+                                        <div class="social-icon-style-3">
+                                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                                            <a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i></a>
+                                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal end -->
+        </div>
+        {% endblock content %}
